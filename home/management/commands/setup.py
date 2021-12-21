@@ -1,7 +1,13 @@
+import os
+import django
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'appname.settings')
+django.setup()
+
+# all imports must go below here
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
 from tqdm import tqdm
-
 
 class Command(BaseCommand):
 
